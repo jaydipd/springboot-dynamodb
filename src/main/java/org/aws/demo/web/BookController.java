@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.aws.demo.data.model.BookInfo;
-import org.aws.demo.data.repositories.BookInfoRepository;
+import org.aws.demo.repositories.BookInfoRepository;
 import org.aws.demo.exception.BookInfoNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -25,6 +25,7 @@ public class OpenApiObjectConversionUtility {
                 .build();
     }
 
+
     public static Wind getWindInstance(final WindDTO windDTO) {
         return Wind.builder()
                 .deg(windDTO.getDeg())

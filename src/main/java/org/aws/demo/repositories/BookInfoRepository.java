@@ -1,4 +1,4 @@
-package org.aws.demo.data.repositories;
+package org.aws.demo.repositories;
 
 import java.util.Optional;
 
