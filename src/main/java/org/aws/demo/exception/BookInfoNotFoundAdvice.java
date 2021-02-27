@@ -21,14 +21,14 @@ public class BookInfoNotFoundAdvice extends ResponseEntityExceptionHandler {
 		return ex.getMessage();
 	}*/
 
-	@ExceptionHandler(BookInfoNotFoundException.class)
-	public ResponseEntity<Object> handleCityNotFoundException(
-			BookInfoNotFoundException ex, WebRequest request) {
+    @ExceptionHandler(BookInfoNotFoundException.class)
+    public ResponseEntity<Object> handleCityNotFoundException(
+            BookInfoNotFoundException ex, WebRequest request) {
 
-		Map<String, Object> body = new LinkedHashMap<>();
-		body.put( "timestamp", LocalDateTime.now());
-		body.put("message", "City not found");
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "City not found");
 
-		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
-	}
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
 }
