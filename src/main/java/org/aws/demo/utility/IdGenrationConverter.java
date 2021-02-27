@@ -8,11 +8,16 @@ public class IdGenrationConverter implements DynamoDBTypeConverter<String, Strin
 
     @Override
     public String convert(String input) {
-        return "open:api:" +  UUID.randomUUID();
+        String str = "open:api:" + input;
+        System.out.println("convert: " + str);
+        return str;
     }
 
     @Override
     public String unconvert(String input) {
-        return input.replaceFirst("open:api:", "");
+        System.out.println("unconvert: " + input);
+        String str = input.replaceFirst("open:api:", "");
+        System.out.println("after unconvert: " + str);
+        return str;
     }
 }

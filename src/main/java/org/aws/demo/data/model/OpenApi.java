@@ -57,6 +57,4 @@ public class OpenApi {
     private String name;
 
     private Double cod;
-
-
 }
