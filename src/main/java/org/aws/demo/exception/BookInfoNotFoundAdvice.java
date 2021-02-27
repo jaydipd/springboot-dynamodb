@@ -13,14 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @ControllerAdvice
 public class BookInfoNotFoundAdvice extends ResponseEntityExceptionHandler {
-
-	/*@ResponseBody
-	@ExceptionHandler(BookInfoNotFoundException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	String bookInfoNotFoundHandler(BookInfoNotFoundException ex, WebRequest request) {
-		return ex.getMessage();
-	}*/
-
+    
     @ExceptionHandler(BookInfoNotFoundException.class)
     public ResponseEntity<Object> handleCityNotFoundException(
             BookInfoNotFoundException ex, WebRequest request) {
